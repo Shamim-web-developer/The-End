@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title></title>
+    <style type="text/css" media="all">
+      @import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+      *
+      {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body 
+      {
+        background: #111;
+      }
+      #loading 
+      {
+        top: 50%;
+        left: 50%;
+        display: block;
+        position: absolute;
+        transform: translate(-50%,-50%);
+      }
+      .box 
+      {
+        height: 160px;
+        width: 160px;
+        border-radius: 50%;
+        border: 10px solid #fff;
+        border-right-color: #1473ef;
+        box-shadow: 0 0 10px #fff,inset 0 0 10px #fff;
+        animation: roll 1.2s infinite linear;
+      }
+      @keyframes roll 
+      {
+        100% 
+        {
+          transform: rotate(360deg);
+        }
+      }
+      .name 
+      {
+        color: #fff;
+        font-size: 9vw;
+        text-align: center;
+        font-family: "Carter One",Cursive;
+        margin-top: 2rem;
+      }
+      #container
+      {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      #button 
+      {
+        color: #fff;
+        font-size: 10vw;
+        user-select: none;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        text-decoration: none;
+        border: 4px solid #fff;
+        box-shadow: 0 0 20px #fff;
+        animation: knock 5s infinite linear;
+        font-family: 'Carter One',Cursive;
+      }
+      @keyframes knock 
+      {
+        0% 
+        {
+          transform: scale(1);
+        }
+        5% 
+        {
+          transform: scale(.5);
+        }
+        10% 
+        {
+          transform: scale(1.4);
+        }
+        15%
+        {
+          transform: scale(1);
+        }
+        100% 
+        {
+          transform: scale(1);
+        }
+      }
+      #button:active 
+      {
+        font-size: 9vw;
+      }
+    </style>
+  </head>
+  <body onload="loading()">
+    <div id="loading">
+     <div class="box"></div>
+     <p class="name">Loading..</p>
+    </div>
+    
+    <div id="container">
+      <a id="button" href="https://img.freepik.com/premium-vector/coming-soon-banner-template-with-editable-text-effect_535749-689.jpg?w=740">Click Here</a>
+    </div>
+    <script type="text/javascript" charset="utf-8">
+      var load = document.getElementById('loading');
+      var main = document.getElementById('container');
+      
+      function loading(){
+        load.style.display="none";
+        main.style.display="flex";
+        }
+    </script>
+  </body>
+</html>
